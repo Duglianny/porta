@@ -1,0 +1,159 @@
+
+:root{
+  --fuentePrincipal: 'Montserrat', sans-serif;
+  --fuenteSecundaria: 'Raleway', sans-serif;
+  --fuenteTerciaria: 'Roboto', sans-serif;
+  --primary: #e99401;
+  --negro: #262626;
+  --blanco: #FFF;
+  --grisOscuro : #28282a; 
+}
+
+/*generales*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--fuentePrincipal);
+  line-height: 1.5;
+  
+}
+a{
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+[class*="contenedor"]{  
+  max-width: 140rem;
+  width: 95%;
+  margin: 0 auto;
+}
+.header__mobile{
+  display: none;
+}
+.header{
+  background-image: linear-gradient(to right, rgb(0 0 0 / .9), rgb(0 0 0 / .7)), url(../img/header.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 60rem;
+  padding: 5rem ;
+  
+}
+.imagen{
+  width: 25rem;
+  position: absolute;
+  right: 15%;
+  bottom: 30%;
+  animation:  1s ease-in-out 0s 1 mostrarimagen
+}
+@keyframes mostrarimagen{
+
+  0%{
+    opacity: 0;
+    transform: translate(-20rem);
+  }
+  50%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+.header__barra{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.header__logo{
+  color: var(--blanco);
+  font-size: 2rem;
+}
+.header__logo:hover{
+  color:  rgb(190, 159, 196);
+}
+
+.navegacion__enlace{
+  color: var(--blanco);
+  padding: 2rem 1rem;
+}
+.navegacion__enlace:hover{
+  border-bottom: solid 2px rgb(190, 159, 196);
+  
+}
+.header__info{
+  color: var(--blanco);
+  max-width: 50rem;
+  margin-top: 10rem;
+}
+.header__nombre span{
+  display: block;
+  font-size: 4rem;
+  color: rgb(190, 159, 196);
+  margin: 1rem 0;
+}
+.header__cargo{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.header__descripcion{
+  line-height: 2;
+  
+}
+
+@media screen and (max-width: 800px) {
+  
+  .header__barra{
+    display: none;
+  }
+  .header__mobile{
+    display: block;
+    
+  }
+  .mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__logo{
+    font-size: 1.6rem;
+  }
+  .boton button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+  
+  }
+  .navegacion{
+    margin-top: 2rem;
+  }
+  .navegacion__enlace{
+    display: block;
+  
+  }
+  .navegacion__enlace:hover{
+    border-bottom: none;
+    color: rgb(190, 159, 196);
+  }
+  .imagen{
+    display: none;
+  }
+}
